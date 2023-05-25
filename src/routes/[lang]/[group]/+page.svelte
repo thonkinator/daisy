@@ -15,7 +15,7 @@
 
 <h1>{group.caption}</h1>
 
-{#each group.desc.split(/(?:\n\s*){2}/) as paragraph}
+{#each group.desc.split(/(?:\n){1,2}\s+/) as paragraph}
 	<p>{paragraph}</p>
 {/each}
 
@@ -25,7 +25,7 @@
 			<a href="{$page.url.pathname}#{policy.name}">{policy.name}</a>
 		</h2>
 		<div class="desc">
-			{#each policy.desc.split(/(?:\n\s*){1,2}/g) as paragraph}
+			{#each policy.desc.split(/(?:\n){1,2}\s+/g) as paragraph}
 				<p>{paragraph}</p>
 			{/each}
 		</div>
