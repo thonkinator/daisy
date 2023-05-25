@@ -15,7 +15,7 @@
 
 <h1>{group.caption}</h1>
 
-{#each group.desc.split(/(?:\n\s*){1,2}/) as paragraph}
+{#each group.desc.split(/(?:\n\s*){2}/) as paragraph}
 	<p>{paragraph}</p>
 {/each}
 

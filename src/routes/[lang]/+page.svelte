@@ -14,7 +14,7 @@
 	<h2 id={group.name}>
 		<a href="{$page.params.lang}/{group.name}">{group.caption}</a>
 	</h2>
-	{#each group.desc.split(/(?:\n\s*){1,2}/g) as paragraph}
+	{#each group.desc.split(/(?:\n\s*){2}/g) as paragraph}
 		<p>{paragraph}</p>
 	{/each}
 {/each}
