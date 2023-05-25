@@ -1,0 +1,31 @@
+{
+	"name": "node-r9div2",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "node fetchPolicies.js && vite build",
+		"preview": "vite preview",
+		"update": "node fetchPolicies.js",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check .",
+		"format": "prettier --plugin-search-dir . --write ."
+	},
+	"devDependencies": {
+		"@sveltejs/kit": "^1.18.0",
+		"prettier": "^2.8.8",
+		"prettier-plugin-svelte": "^2.10.0",
+		"resolve-accept-language": "^2.0.1",
+		"svelte": "^3.59.1",
+		"svelte-check": "^3.3.2",
+		"tslib": "^2.5.2",
+		"typescript": "^5.0.4",
+		"undici": "^5.22.1",
+		"vite": "^4.3.8"
+	},
+	"type": "module",
+	"dependencies": {
+		"@sveltejs/adapter-cloudflare": "^2.2.4"
+	}
+}

@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--bg: #1f1f1f;
+	--bd: #444746;
+	background-color: var(--bg);
+	color: white;
+	font-family: Roboto;
+	font-size: 1.125em;
+	line-height: 1.25;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Google Sans";
+	font-weight: 500;
+}
+
+a {
+	color: unset;
+	text-decoration: none;
+	font-family: "Google Sans";
+}
