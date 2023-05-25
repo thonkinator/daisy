@@ -5,8 +5,8 @@
 
 	let main: HTMLElement;
 	// see https://github.com/sveltejs/kit/issues/2733 & https://github.com/sveltejs/kit/pull/8723
-	afterNavigate(() => {
-		main.scrollTo(0, 0);
+	afterNavigate(({ type }) => {
+		if (type != "enter") main.scrollTo(0, 0);
 	});
 </script>
 
@@ -44,6 +44,7 @@
 	}
 	h2 {
 		font-size: 2rem;
+		user-select: none;
 	}
 	nav {
 		display: contents;

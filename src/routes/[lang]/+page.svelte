@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from "$app/stores";
+	import ListSection from "@/ListSection.svelte";
 	export let data;
 </script>
 
@@ -11,26 +11,11 @@
 <p>A policy editor for Pollen/fakemurk.</p>
 
 {#each data.groups as group (group.name)}
-	<h2 id={group.name}>
-		<a href="{$page.params.lang}/{group.name}">{group.caption}</a>
-	</h2>
-	{#each group.desc.split(/(?:\n){1,2}\s+/g) as paragraph}
-		<p>{paragraph}</p>
-	{/each}
+	<ListSection
+		id={group.name}
+		href="/{data.lang.code}/{group.name}"
+		title={group.caption}
+		sub={group.name}
+		desc={group.desc}
+	/>
 {/each}
-
-<style>
-	p {
-		padding: 0.5rem 0;
-	}
-	h2 {
-		margin-top: 1.5rem;
-	}
-	h2 a {
-		text-decoration: underline transparent;
-		transition: text-decoration 0.3s ease;
-	}
-	h2 a:hover {
-		text-decoration: underline var(--bd);
-	}
-</style>

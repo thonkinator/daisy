@@ -1,9 +1,11 @@
 {
 	"en-US": {
+		"code": "en-US",
 		"alt": "en_us",
 		"name": "English"
 	},
 	"es-ES": {
+		"code": "es-ES",
 		"alt": "es_es",
 		"name": "Español (España)",
 		"todo": {
@@ -15,38 +17,47 @@
 		}
 	},
 	"de-DE": {
+		"code": "de-DE",
 		"alt": "de_de",
 		"name": "Deutsch (Deutschland)"
 	},
 	"fr-FR": {
+		"code": "fr-FR",
 		"alt": "fr_fr",
 		"name": "Français (France)"
 	},
 	"it-IT": {
+		"code": "it-IT",
 		"alt": "it_it",
 		"name": "Italiano (Italia)"
 	},
 	"ja-JP": {
+		"code": "ja-JP",
 		"alt": "ja_jp",
 		"name": "日本語 (日本)"
 	},
 	"nl-NL": {
+		"code": "nl-NL",
 		"alt": "nl_nl",
 		"name": "Nederlands (Nederland)"
 	},
 	"pt-BR": {
+		"code": "pt-BR",
 		"alt": "pt_br",
 		"name": "Português (Brasil)"
 	},
 	"ru-RU": {
+		"code": "ru-RU",
 		"alt": "ru_ru",
 		"name": "Русский (Россия)"
 	},
 	"zh-CN": {
+		"code": "zh-CN",
 		"alt": "zh_cn",
 		"name": "中文 (中国)"
 	},
 	"zh-TW": {
+		"code": "zh-TW",
 		"alt": "zh_tw",
 		"name": "中文 (台灣)"
 	}

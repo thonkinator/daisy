@@ -7,6 +7,7 @@
 :root {
 	--bg: #1f1f1f;
 	--bd: #444746;
+	--sub: #9aa0a6;
 	background-color: var(--bg);
 	color: white;
 	font-family: Roboto;
@@ -30,4 +31,10 @@ a {
 	color: unset;
 	text-decoration: none;
 	font-family: "Google Sans";
+}
+
+.material-symbols-outlined {
+	user-select: none;
+	vertical-align: text-bottom;
+	font-size: 1.25em;
 }

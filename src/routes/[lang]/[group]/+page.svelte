@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores";
+	import ListSection from "@/ListSection.svelte";
 	export let data;
 
 	// needs to be reactive or the page doesn't navigate right for some reason
@@ -20,48 +21,11 @@
 {/each}
 
 {#each policies as policy (policy.name)}
-	<article>
-		<h2 id={policy.name}>
-			<a href="{$page.url.pathname}#{policy.name}">{policy.name}</a>
-		</h2>
-		<div class="desc">
-			{#each policy.desc.split(/(?:\n){1,2}\s+/g) as paragraph}
-				<p>{paragraph}</p>
-			{/each}
-		</div>
-		<div class="edit" />
-	</article>
+	<ListSection
+		id={policy.name}
+		href="/{data.lang.code}/{group.name}#{policy.name}"
+		title={policy.name}
+		sub={policy.caption}
+		desc={policy.desc}
+	/>
 {/each}
-
-<style>
-	p {
-		padding: 0.5rem 0;
-	}
-	article {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto auto;
-		grid-template-areas:
-			"h2 h2"
-			"desc edit";
-	}
-	h2 {
-		margin-top: 1.5rem;
-		scroll-margin-top: 1.25rem;
-		grid-area: h2;
-	}
-	h2 a {
-		text-decoration: underline transparent;
-		transition: text-decoration 0.3s ease;
-	}
-	h2:target a,
-	h2 a:hover {
-		text-decoration: underline var(--bd);
-	}
-	.desc {
-		grid-area: desc;
-	}
-	.edit {
-		grid-area: edit;
-	}
-</style>
