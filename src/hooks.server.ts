@@ -14,5 +14,5 @@ export function handle({ event: { url, request }, event, resolve }) {
 	).getMatch();
 	if (path[1] == lang) return resolve(event);
 	path[1] = lang;
-	throw redirect(308, `${url.origin}/${path.join("/")}`);
+	throw redirect(308, path.join("/"));
 }
